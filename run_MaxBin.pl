@@ -1,12 +1,16 @@
-#!/usr/bin/perl -w
+#!/usr/bin/env perl
 use strict;
 use Cwd;
 use LWP::Simple;
 use FindBin qw($Bin);
+use Cwd 'abs_path';
+use File::Basename;
 
 my $currdir = getcwd;
 
 my $VERSION_NUM = "2.2.7";
+
+$Bin = dirname(abs_path(__FILE__));
 
 require("$Bin\/_getmarker.pl");
 require("$Bin\/_getabund.pl");
