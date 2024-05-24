@@ -5,7 +5,7 @@
 
 #include "ThreadPool.h"
 
-ThreadPool::ThreadPool(unsigned int n)	: busy(), processed(), stop()
+ThreadPool::ThreadPool(unsigned int n)	: processed(), busy(), stop()
 //ThreadPool::ThreadPool(unsigned int n)
 {
 	for (unsigned int i=0; i<n; ++i)
